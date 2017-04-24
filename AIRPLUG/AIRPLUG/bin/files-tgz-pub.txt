@@ -1,0 +1,8 @@
+config.sh
+replacestr.sh
+newapp.sh
+lastfile.sh
+Makefile
+tgz-history.txt
+license.txt
+README.pub

@@ -1,0 +1,56 @@
+#    hlg
+#    an airplug compatible program
+#    author: Bertrand Ducourthial AT utc.fr, newapp from NET v0.31
+#    license type: free of charge license for academic and research purpose
+#    see license.txt
+### MODULE SHARED VARIABLE ####################################################
+ 
+### VARIABLES OF THE MODULE ###################################################
+ # Array FIFO of exclusion mutuelle
+set HLG_fifo_h $HLG_rc_fifoh
+###############################################################################
+ 
+ 
+### GRAPHICAL AREA OF THE MODULE ##############################################
+labelframe .fifo -pady 2 -padx 2 \
+    -text "FIFO (attente SC) \[$APP, ident = $APG_ident\]"  -fg $APG_int_coltitle
+ 
+label .fifo.t -text "FIFO (attente SC) : "
+label .fifo.h -textvariable HLG_fifo_h -width 30 -anchor w
+pack .fifo.t .fifo.h -side left
+
+###############################################################################
+ 
+ 
+### COMMAND LINE OPTION #######################################################
+ 
+###############################################################################
+ 
+ 
+### PROCEDURES OF THE MODULE ##################################################
+  #-- Procedure HLG_ask_sc ---------------------------------------------#
+# Action : modify the FIFO tab : change the lib in req + update the clock
+#
+# Input  : nothing                                                            #
+# Output : nothing
+#
+#-----------------------------------------------------------------------------#
+proc HLG_ask_sc { site_numb, h_rcv } {
+	set ::HLG_fifo_h($site_numb) req
+	set ::HLG_fifo_h(expr {6+$site_numb} $h_rcv
+}
+
+##################################################
+
+  #-- Procedure HLG_lib_sc ---------------------------------------------#
+# Action : modify the FIFO tab : change the req in lib + update the clock
+#
+# Input  : nothing                                                            #
+# Output : nothing
+#
+#-----------------------------------------------------------------------------#
+proc HLG_lib_sc { site_numb, h_rcv } {
+	set ::HLG_fifo_h($site_numb) lib
+	set ::HLG_fifo_h(expr {6+$site_numb} $h_rcv
+}
+###############################################################################

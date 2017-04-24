@@ -1,0 +1,46 @@
+#    bas
+#    an airplug compatible program
+#    author: Bertrand Ducourthial AT utc.fr, Anthony Buisset (v0.1)
+#    license type: free of charge license for academic and research purpose
+#    see license.txt
+### MODULE EMISSION ###########################################################
+
+### VARIABLES DU MODULE #######################################################
+# Chemin par défaut du fichier d'écriture
+set BAS_path_file $BAS_rc_path_file
+
+###############################################################################
+
+### ZONE DU MODULE ############################################################
+
+###############################################################################
+
+
+### OPTIONS DE LA LIGNE DE COMMANDE ###########################################
+foreach option $APG_lstargs {
+    set name [lindex [split $option "="] 0]
+    set value [lindex [split $option "="] 1]
+ 
+    switch -- $name {
+	--path_sh_file {
+	    if { $value == "" } {
+		APG_vrb_dispwarning "option $name found without argument ; ignored" "bas-cs"
+	    } else {
+		set BAS_path_file $value
+		APG_vrb_dispnotif "option $option found; initial path file value=$value" "bas-cs"
+            }
+	}
+    }
+}
+###############################################################################
+
+### PROCEDURE DE L'INTERFACE ##################################################
+proc BAS_writing {} {
+
+set fi [open  $BAS_path_file a+]
+puts $fi "une ligne"
+puts $fi "Une seconde ligne"
+close $fi
+
+}
+

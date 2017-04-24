@@ -1,0 +1,8 @@
+04/21/2017:13h07m44s:1492772864322136:HLG_snd_msg : HLG_rcv_msg
+04/21/2017:13h07m44s:1492772864435495:<I/O> : "stdin > HLG : BASHLG^payload~message emis par BAS (ident=writer)^nseq~81^"
+04/21/2017:13h07m44s:1492772864436887:<I/O> : "HLG > stdout : HLGHLG^appnet~BAS^hlgclk~80^payload~message emis par BAS (ident=writer)^nseq~81^"
+04/21/2017:13h07m45s:1492772865437761:<I/O> : "stdin > HLG : BASHLG^payload~message emis par BAS (ident=writer)^nseq~82^"
+04/21/2017:13h07m45s:1492772865439140:<I/O> : "HLG > stdout : HLGHLG^appnet~BAS^hlgclk~81^payload~message emis par BAS (ident=writer)^nseq~82^"
+04/21/2017:13h07m46s:1492772866439786:<I/O> : "stdin > HLG : BASHLG^payload~message emis par BAS (ident=writer)^nseq~83^"
+04/21/2017:13h07m46s:1492772866441337:<I/O> : "HLG > stdout : HLGHLG^appnet~BAS^hlgclk~82^payload~message emis par BAS (ident=writer)^nseq~83^"
+Fin sauvegardes

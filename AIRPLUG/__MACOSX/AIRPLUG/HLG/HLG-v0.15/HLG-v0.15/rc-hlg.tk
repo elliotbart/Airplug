@@ -1,0 +1,35 @@
+#    hlg
+#    an airplug compatible program
+#    author: Bertrand Ducourthial AT utc.fr, Anthony Buisset (v0.1)
+#    license type: free of charge license for academic and research purpose
+#    see license.txt
+###############################################################################
+
+# Mnemonique pour le header HLG, contenant le nom de l'application qui a emis
+# le message transporte.
+set HLG_rc_mnemoapp "appnet"
+
+### Setting for module hlg-lam.tk #############################################
+# Initial value of the Lamport's clock
+set HLG_rc_lamh 0
+
+# Mnemonic for transporting the clock
+set HLG_rc_mnemoclk "hlgclk"
+
+
+### Setting for module hlg-var.tk #############################################
+# Initial value of the site number
+set HLG_rc_fifoh "lib1 lib2 lib3 lib4 lib5 lib6 0 0 0 0 0 0"
+
+
+# Type of action asked by the BAS
+set HLG_rc_mnemoaction "action"
+
+# Standard Msg
+set HLG_rc_typeaction "msgstd"
+
+# Ask to enter in critical section
+set HLG_rc_typeecs "entercs"
+
+# Ask to quite the critical section
+set HLG_rc_typeqcs "quitecs"
